@@ -37,7 +37,7 @@ export default {
             <div class="card-body">
                 <h5 class="card-title">Created by: {{project.user.name}}</h5>
                 <p class="card-text">Type: {{project.type.name}}</p>
-                <p>Technologies: <span v-for="tech in project.technologies">{{ tech.name }}&nbsp;</span></p>
+                <p v-if="project.technologies[0] != null">Technologies: <span v-for="tech in project.technologies">{{ tech.name }}&nbsp;</span></p>
                 <p class="card-text">{{project.description.substr(0, 100)}}</p>
                 <a :href="project.link" class="btn btn-primary">See the project site</a>
             </div>
