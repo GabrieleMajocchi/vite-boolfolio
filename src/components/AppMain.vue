@@ -30,7 +30,7 @@ export default {
 
 <template>
     <main class="d-flex flex-wrap">
-        <div class="card m-5" v-for="project in projects" >
+        <div class="card m-5 text-center" v-for="project in projects" >
             <div class="card-header">
                 <h3>{{project.title}}</h3>
             </div>
