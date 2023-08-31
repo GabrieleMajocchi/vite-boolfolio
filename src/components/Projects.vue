@@ -39,7 +39,7 @@ export default {
                 <p class="card-text">Type: {{project.type.name}}</p>
                 <p v-if="project.technologies[0] != null">Technologies: <span v-for="tech in project.technologies">{{ tech.name }}&nbsp;</span></p>
                 <p class="card-text">{{project.description.substr(0, 100)}}</p>
-                <a :href="project.link" class="btn btn-primary">See the project site</a>
+                <a @click="$router.push({ name: 'projects.show', params: { id: project.id} })"  class="btn btn-primary">See the project site</a>
             </div>
         </div>
     </main>
